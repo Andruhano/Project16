@@ -13,13 +13,15 @@ int main()
 
     cout << "Create Transport Objects:" << endl;
 
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 5; i++) 
+    {
         cout << "Choose type for transport " << (i + 1) << ":" << endl;
         cout << "1. Car" << endl;
         cout << "2. Ship" << endl;
         cout << "3. Airplane" << endl;
         cout << "4. Tram" << endl;
         cout << "5. Motorcycle" << endl;
+        cout << "0. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -40,6 +42,9 @@ int main()
         case 5:
             transports[i] = new Motorcycle();
             break;
+        case 0:
+            cout << "Bye!";
+            return 0;
         default:
             cout << "Invalid choice" << endl;
             break;
